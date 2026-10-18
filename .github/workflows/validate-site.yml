@@ -1,0 +1,34 @@
+name: Trocki22 - Yayin paketini dogrula
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Depoyu al
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Hazirlama betigini kontrol et
+        run: python3 -m py_compile scripts/build-site.py
+
+      - name: Baglantilari dogrula ve yayin dosyalarini hazirla
+        run: python3 scripts/build-site.py
+
+      - name: Cloudflare'a yuklenebilir paketi hazirla
+        uses: actions/upload-artifact@v4
+        with:
+          name: TROCKI22_CLOUDFLARE_YAYIN
+          path: dist/
+          if-no-files-found: error
+          retention-days: 14
