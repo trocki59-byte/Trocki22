@@ -1,0 +1,19 @@
+TROÇKİ22 — Yedi Sayfalı Site
+
+Bu paketin içindeki tüm dosya ve klasörleri web alanınızın ana dizinine birlikte yükleyin.
+"assets" klasörünün yapısını değiştirmeyin; görseller, stiller ve menü işlevleri bu klasördedir.
+
+Ana giriş: index.html
+Sayfalar:
+- hakkimda.html
+- felsefe.html
+- yazilar.html
+- doga-gezi.html
+- projeler.html
+- resimler.html
+- iletisim.html
+
+İletişim:
+- E-posta: sabahattin62@gmail.com
+- Instagram: @trocki22
+

@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "hakkimda.html": 6006,
+    "felsefe.html": 92375,
+    "yazilar.html": 219445,
+    "doga-gezi.html": 157044,
+    "projeler.html": 8351,
+    "resimler.html": 7220,
+    "iletisim.html": 4093,
+    "index.html": 6088
+  },
+  "images": {
+    "found": 158,
+    "unique": 137,
+    "source_bytes": 221547375,
+    "output_bytes": 39844587,
+    "fallbacks": 0
+  },
+  "hero_image": "assets/images/img-61cc40afbd11060c0e41.webp",
+  "brand_image": "assets/images/img-24638239a291be96070a.webp"
+}

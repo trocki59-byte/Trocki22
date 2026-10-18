@@ -1,0 +1,21 @@
+﻿TROÇKİ22 — YEDİ SAYFA
+YAYIN PAKETİ · 30 Eylül 2026
+
+Bu ZIP, seçtiğin TROÇKİ22 — Yedi Sayfa projesinin son kayıtlı sürümünü içerir.
+Ana sayfa, yedi bölüm ve 163 görsel birlikte paketlenmiştir.
+
+BÖLÜMLER
+Hakkımda, Felsefe, Yazılar, Doğa & Gezi, Projeler, Resimler, İletişim.
+
+BİLGİSAYARDA AÇMA
+ZIP dosyasını bir klasöre çıkar. index.html dosyasına çift tıkla.
+
+WEB ALANINA YÜKLEME
+ZIP içindeki index.html, diğer HTML dosyaları ve assets klasörünü birlikte
+web alanının yayın klasörüne yükle. assets klasörünün iç düzenini koru.
+Dosyaları barındırma sağlayıcının belirttiği kök klasöre yerleştir;
+bu klasör birçok sistemde public_html veya www olarak adlandırılır.
+
+NOT
+E-posta abonelik düğmesi, ziyaretçinin e-posta uygulamasında abonelik
+isteği hazırlar. Otomatik bir toplu e-posta gönderim hizmeti içermez.
