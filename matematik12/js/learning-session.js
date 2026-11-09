@@ -1,0 +1,5 @@
+import {checkAnswer} from './questions/answers.js';
+export function createLearningSession(lesson,learningStore,legacyStore){
+ let index=0,locked=false,recorded=false,assisted=false;
+ return {current(){return lesson.exercises[index]||null;},position(){return {index,total:lesson.exercises.length};},submit(input){const question=this.current();if(!question||locked)return {status:'already-answered',question};const r=checkAnswer(question,input);if(!r.valid)return {status:'invalid',question,message:r.message};locked=true;if(!recorded){learningStore.recordAttempt(lesson.id,{questionId:question.id,firstTryCorrect:r.correct&&!assisted,assisted});legacyStore.record(lesson.id,r.correct&&!assisted);recorded=true;}return {status:r.correct?'correct':'incorrect',question};},revealSolution(){const question=this.current();if(!question)return null;assisted=true;locked=true;if(!recorded){learningStore.recordAttempt(lesson.id,{questionId:question.id,firstTryCorrect:false,assisted:true});legacyStore.record(lesson.id,false);recorded=true;}return question;},retry(){locked=false;},next(){index++;locked=false;recorded=false;assisted=false;return this.current();}};
+}

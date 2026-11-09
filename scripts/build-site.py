@@ -8,7 +8,8 @@ import sys
 
 ROOT = Path(".")
 OUTPUT = ROOT / "dist"
-pages = sorted(ROOT.glob("*.html"))
+APP = ROOT / "matematik12"
+pages = sorted(ROOT.glob("*.html")) + sorted(APP.glob("*.html"))
 references = set()
 errors = []
 
@@ -48,6 +49,8 @@ for file in list(ROOT.glob("assets/**/*.css")) + list(ROOT.glob("assets/**/*.js"
 
 for value in sorted(references):
     path = ROOT / value
+    if path.is_dir():
+        path = path / "index.html"
     if not path.is_file():
         errors.append(value)
     elif path.stat().st_size == 0:
@@ -61,8 +64,11 @@ if OUTPUT.exists():
     shutil.rmtree(OUTPUT)
 OUTPUT.mkdir()
 for page in pages:
-    shutil.copy2(page, OUTPUT / page.name)
+    if page.parent == ROOT:
+        shutil.copy2(page, OUTPUT / page.name)
 shutil.copytree(ROOT / "assets", OUTPUT / "assets", ignore=shutil.ignore_patterns(".gitkeep"))
+if APP.is_dir():
+    shutil.copytree(APP, OUTPUT / APP.name)
 for name in ("robots.txt", "sitemap.xml", "_headers", "_redirects"):
     if (ROOT / name).is_file():
         shutil.copy2(ROOT / name, OUTPUT / name)
