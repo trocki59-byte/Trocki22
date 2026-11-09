@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1280" viewBox="0 0 720 1280">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071b13"/><stop offset=".55" stop-color="#145c38"/><stop offset="1" stop-color="#082719"/></linearGradient><radialGradient id="glow"><stop stop-color="#ffd56a" stop-opacity=".5"/><stop offset="1" stop-color="#ffd56a" stop-opacity="0"/></radialGradient></defs>
+<rect width="720" height="1280" rx="48" fill="url(#bg)"/><circle cx="575" cy="190" r="210" fill="url(#glow)"/>
+<text x="55" y="92" fill="#f4c453" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="4">TROÇKİ STUDIO • WEB OYUNU</text>
+<text x="55" y="190" fill="white" font-family="Georgia,serif" font-size="58" font-weight="700">TROÇKİ</text><text x="55" y="255" fill="#f4c453" font-family="Georgia,serif" font-size="64" font-weight="700">3D MATCH</text>
+<text x="55" y="306" fill="#d9f2e4" font-family="Arial,sans-serif" font-size="29">ORMAN MACERASI</text>
+<g font-size="92"><text x="65" y="470">🍎</text><text x="235" y="425">🍓</text><text x="405" y="485">🍌</text><text x="540" y="405">🥕</text><text x="150" y="610">🍇</text><text x="355" y="620">🍊</text><text x="535" y="590">🥦</text></g>
+<rect x="48" y="680" width="624" height="285" rx="30" fill="#06130e" fill-opacity=".72" stroke="#d9a83e" stroke-width="2"/>
+<text x="78" y="735" fill="#f4c453" font-family="Arial,sans-serif" font-size="27" font-weight="700">50 BÖLÜMLÜK EŞLEŞTİRME MACERASI</text>
+<text x="78" y="790" fill="white" font-family="Arial,sans-serif" font-size="25">• Üç aynı nesneyi bul ve eşleştir</text><text x="78" y="838" fill="white" font-family="Arial,sans-serif" font-size="25">• Bölümler ilerledikçe zorluk artar</text><text x="78" y="886" fill="white" font-family="Arial,sans-serif" font-size="25">• İlerlemen telefonda otomatik kaydolur</text><text x="78" y="934" fill="white" font-family="Arial,sans-serif" font-size="25">• iPhone ve Android uyumlu</text>
+<rect x="95" y="1020" width="530" height="92" rx="46" fill="#7bd83e"/><text x="360" y="1078" text-anchor="middle" fill="#092111" font-family="Arial,sans-serif" font-size="32" font-weight="800">▶ OYUNU AÇ VE OYNA</text>
+<text x="360" y="1180" text-anchor="middle" fill="#f4c453" font-family="Arial,sans-serif" font-size="24">trocki59-byte.github.io/trocki-3d-match/</text>
+<text x="360" y="1230" text-anchor="middle" fill="#cde7d8" font-family="Arial,sans-serif" font-size="20">TROÇKİ22 • Düşün • Keşfet • Üret • Paylaş</text></svg>
