@@ -9,7 +9,8 @@ import sys
 ROOT = Path(".")
 OUTPUT = ROOT / "dist"
 APP = ROOT / "matematik12"
-pages = sorted(ROOT.glob("*.html")) + sorted(APP.glob("*.html"))
+ARTICLES = ROOT / "yazilar"
+pages = sorted(ROOT.glob("*.html")) + sorted(APP.glob("*.html")) + sorted(ARTICLES.glob("*.html"))
 references = set()
 errors = []
 
@@ -69,6 +70,8 @@ for page in pages:
 shutil.copytree(ROOT / "assets", OUTPUT / "assets", ignore=shutil.ignore_patterns(".gitkeep"))
 if APP.is_dir():
     shutil.copytree(APP, OUTPUT / APP.name)
+if ARTICLES.is_dir():
+    shutil.copytree(ARTICLES, OUTPUT / ARTICLES.name)
 for name in ("robots.txt", "sitemap.xml", "_headers", "_redirects"):
     if (ROOT / name).is_file():
         shutil.copy2(ROOT / name, OUTPUT / name)
