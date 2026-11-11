@@ -37,11 +37,11 @@ if not (ROOT / "index.html").is_file():
 for page in pages:
     text = page.read_text(encoding="utf-8-sig")
     Dependencies(page.as_posix()).feed(text)
-    references.update(re.findall(r"assets/[A-Za-z0-9_./-]+\.(?:css|js|webp|jpe?g|png|svg|gif|woff2?|ttf|ico)", text, re.I))
+    references.update(re.findall(r"(?<![A-Za-z0-9_-])assets/[A-Za-z0-9_./-]+\.(?:css|js|webp|jpe?g|png|svg|gif|woff2?|ttf|ico)", text, re.I))
 
 for file in list(ROOT.glob("assets/**/*.css")) + list(ROOT.glob("assets/**/*.js")):
     text = file.read_text(encoding="utf-8-sig", errors="replace")
-    references.update(re.findall(r"assets/[A-Za-z0-9_./-]+\.(?:css|js|webp|jpe?g|png|svg|gif|woff2?|ttf|ico)", text, re.I))
+    references.update(re.findall(r"(?<![A-Za-z0-9_-])assets/[A-Za-z0-9_./-]+\.(?:css|js|webp|jpe?g|png|svg|gif|woff2?|ttf|ico)", text, re.I))
     if file.suffix == ".css":
         for value in re.findall(r"""url\(\s*["']?([^"')\s]+)""", text, re.I):
             if value.startswith(("data:", "https:", "http:", "//", "#")):
